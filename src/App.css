@@ -1,0 +1,157 @@
+
+
+/* Container to center content vertically and horizontally */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Styles for card */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Set a maximum width for consistency */
+  width: 100%; /* Ensure the card takes full width within container */
+}
+
+/* Padding inside the card body */
+.card-body {
+  padding: 2rem;
+}
+
+/* Center the card title */
+.card-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.btn-custom-login,
+.btn-custom-signup {
+  width: 100%; /* Make buttons full width */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.btn-custom-login {
+  background-color: #007bff; /* Primary color */
+  color: #ffffff; /* Text color */
+}
+
+.btn-custom-signup {
+  background-color: #6c757d; /* Secondary color */
+  color: #ffffff; /* Text color */
+}
+
+/* Ensure the login and signup boxes have similar spacing */
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* App.css */
+
+/* Custom button styles */
+.btn-custom-login {
+  background-color: #007bff; /* Primary color */
+  color: #ffffff; /* Text color */
+  border: none;
+}
+
+.btn-custom-signup {
+  background-color: #6c757d; /* Secondary color */
+  color: #ffffff; /* Text color */
+  border: none;
+}
+
+.btn-custom-login:hover,
+.btn-custom-signup:hover {
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+}
+
+/* App.css */
+
+/* Ensures the page takes up the full height and centers content */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Flex container to center items vertically and horizontally */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Styles the card for login and signup forms */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Padding inside the card body */
+.card-body {
+  padding: 2rem;
+}
+
+/* Center text and add some margin to title */
+.card-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+  margin-bottom: 1rem; /* Adds some space below the navbar */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Adjust font size for the brand */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Pushes nav items to the right */
+}
+
+/* Align buttons in navbar */
+.navbar-nav .nav-link {
+  margin-left: 1rem;
+}
+
+/* Button styling */
+.btn-light {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* App.css */
+
+/* Background for the login page */
+.login-background {
+  /* background-image: url("crm-background.jpg"); Path to your image */
+  background-image: url("crm-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Additional styles for the login card */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* "https://www.talisma.com/wp-content/uploads/2021/07/Title_8-distinguished-merits-of-CRM-Software-Solutions-for-businesses.jpg" */
