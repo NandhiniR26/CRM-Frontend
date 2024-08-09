@@ -155,3 +155,34 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 /* "https://www.talisma.com/wp-content/uploads/2021/07/Title_8-distinguished-merits-of-CRM-Software-Solutions-for-businesses.jpg" */
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light background for the app */
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* Center the login/signup form */
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}

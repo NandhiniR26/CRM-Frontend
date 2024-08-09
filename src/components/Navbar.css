@@ -1,0 +1,23 @@
+/* src/components/Navbar.css */
+.navbar {
+    padding: 10px 20px;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .btn {
+    font-weight: bold;
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .btn:hover {
+    color: #0056b3;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #343a40;
+  }
+  
