@@ -135,7 +135,7 @@ font-weight: bold;
 #userLoginForm #btn44{
   margin-top: 20px;
   margin-right: 25px;
-  background-color:red;
+  background-color:rgb(239, 118, 118);
 
   border-radius: 25px;
   margin-left: 25px;
@@ -149,7 +149,7 @@ font-weight: bold;
   margin-top:20px;
   margin-right: 25px;
   margin-left: 20px;
-  color: #ffdf34;
+  color: #897eff;
 }
 
 #userLoginForm #noAcc:hover
@@ -216,7 +216,7 @@ font-weight: bold;
 #registerForm #btn444{
   margin-top: 20px;
   margin-right: 25px;
-  background-color:red;
+  background-color:rgb(239, 118, 118);
 
   border-radius: 25px;
   margin-left: 25px;
@@ -230,7 +230,7 @@ font-weight: bold;
   margin-top:20px;
   margin-right: 25px;
   margin-left: 20px;
-  color: #ffdf34;
+  color:#897eff;
 }
 #registerForm #noAcc444:hover
   {
