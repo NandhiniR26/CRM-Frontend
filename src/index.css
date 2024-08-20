@@ -152,7 +152,11 @@ font-weight: bold;
   color: #ffdf34;
 }
 
-
+#userLoginForm #noAcc:hover
+  {
+   cursor:pointer;
+    font-weight: bold;
+}
 
 #userLoginForm #btn11:hover,#btn22:hover,#btn33:hover ,#btn44:hover
 {
@@ -227,6 +231,11 @@ font-weight: bold;
   margin-right: 25px;
   margin-left: 20px;
   color: #ffdf34;
+}
+#registerForm #noAcc444:hover
+  {
+   cursor:pointer;
+    font-weight: bold;
 }
 #registerForm #btn111:hover,#btn222:hover,#btn333:hover,#btn444:hover
 {
