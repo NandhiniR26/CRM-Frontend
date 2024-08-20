@@ -1,12 +1,245 @@
-
-
 .route{
   font-size: x-large;
-  background-color: #d0e7fe;
+  background-color: #212121 ;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
+/* =============================================== front page css =========================================== */
+.imageDisplay
+{
+  margin-top: 100px;
+  
+  
+}
+#userImage
+{
+  background-color: white;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+#adminImage
+{
+  background-color: white;
+  border-radius: 50%;
+
+}
+#userImage:hover,#adminImage:hover
+{
+  border:5px double black;
+  cursor: pointer;
+  box-shadow: 3px 5px 10px 0px #ffdf34;
+}
 
 
+#frontPageTitle
+{
+  background-color: #ffdf34;
+  text-align: center;
+}
+/*====================================================== admin login css======================================== */
+#adminMainDiv div
+{
+    display: inline-block;
+    /* border: 5px solid green; */
+}
+#adminLoginForm #textBox1,#textBox2
+{
+  width:90%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #897eff;
+  color:#897eff;
+}
+#adminMainDiv #adminImg
+{
+  width: 60%; 
+}
+#adminMainDiv #adminLoginForm
+{
+  width: 40%;
+  
+}
+#adminLoginForm #btn1,#btn2,#btn3
+{
+  
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color: #ffdf34;
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 5px;
+  width: 100px;
+  color:black;
+  text-decoration: none;
+}
+#adminLoginForm #btn1:hover,#btn2:hover,#btn3:hover
+{
+border:2px ridge white;
+font-weight: bold;
+}
+#adminLoginForm h2
+{
+  color:#ffdf34;
+}
+#adminMainDiv
+{
+  background-color:#212121;
+}
+
+/*====================================================== user login css======================================== */
+#userMainDiv div
+{
+    display: inline-block;
+    /* border: 5px solid green; */
+}
+#userLoginForm #textBox11,#textBox22
+{
+  width:90%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #897eff;
+  color:#897eff;
+}
+#userMainDiv #userImg
+{
+  width: 60%; 
+}
+#userMainDiv #userLoginForm
+{
+  width: 40%;
+  
+}
+#userLoginForm #btn11,#btn22,#btn33
+{
+  
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color: #ffdf34;
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 5px;
+  width: 100px;
+  color:black;
+  text-decoration: none;
+}
+
+#userLoginForm #btn44{
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color:red;
+
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 5px;
+  width: 100px;
+  color:black;
+  display:inline;
+  text-decoration: none;
+}
+#userLoginForm #noAcc{
+  margin-top:20px;
+  margin-right: 25px;
+  margin-left: 20px;
+  color: #ffdf34;
+}
+
+
+
+#userLoginForm #btn11:hover,#btn22:hover,#btn33:hover ,#btn44:hover
+{
+border:2px ridge white;
+font-weight: bold;
+}
+#userLoginForm h2
+{
+  color:#ffdf34;
+}
+#userMainDiv
+{
+  background-color:#212121;
+}
+
+/*======================================================  Register css======================================== */
+#registerMainDiv div
+{
+    display: inline-block;
+    /* border: 5px solid green; */
+}
+#registerForm #textBox111,#textBox222,#textBox333,#textBox444
+{
+  width:90%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #897eff;
+  color:#897eff;
+}
+#registerMainDiv #registerImg
+{
+  width: 60%; 
+}
+#registerMainDiv #registerForm
+{
+  width: 40%;
+  
+}
+#registerForm #btn111,#btn222,#btn333
+{
+  
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color: #ffdf34;
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 5px;
+  width: 100px;
+  color:black;
+  text-decoration: none;
+
+}
+#registerForm #btn444{
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color:red;
+
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 5px;
+  width: 100px;
+  color:black;
+  display:inline;
+  text-decoration: none;
+}
+#registerForm #noAcc444{
+  margin-top:20px;
+  margin-right: 25px;
+  margin-left: 20px;
+  color: #ffdf34;
+}
+#registerForm #btn111:hover,#btn222:hover,#btn333:hover,#btn444:hover
+{
+border:2px ridge white;
+font-weight: bold;
+}
+#registerForm h2
+{
+
+  color:#ffdf34;
+}
+#registerMainDiv
+{
+  background-color:#212121;
+}
 
