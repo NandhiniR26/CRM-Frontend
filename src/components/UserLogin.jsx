@@ -2,8 +2,40 @@ import React from 'react'
 import '../index.css'
 import userLoginImage from '../images/userLoginImage.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import Axios  from 'axios'
 
 const UserLogin = () => {
+
+  const[email,setEmail]=useState("")
+  const[password,setPassword]=useState("")
+  const [list,setList]=useState(null)
+  const handleFun=(event)=>{
+    if(event.target.id==="textBox11")
+      setEmail(event.target.value)
+    if (event.target.id==="textBox22")
+     setPassword(event.target.value)
+  }
+  const handleSubmit=(event)=>{
+    event.preventDefault()
+    var userObj={
+      email:email,
+      password:password
+    }
+    Axios.post("http://localhost:3001/api/v1/users/login",userObj) .then((res)=>{
+      console.log("login success",res.data)                                      
+       setList(res.data)
+     }).catch((err)=>{
+      console.log("Failed to login",err.data)
+      setList(err.data)
+     })
+     
+    // Axios.post("http://localhost:3001/api/v1/users/login",userObj).then((res)=>{
+    //   console.log("login successful:",res.data)
+    // }).catch((err)=>{
+    //   console.log("login failed:",err.data)
+    // })
+  } 
   return (
     <div id="userMainDiv">
       <div id="userImg"> 
@@ -11,9 +43,9 @@ const UserLogin = () => {
       </div>
       <div id="userLoginForm">
         <h2>USER LOGIN</h2>
-        <form>
-        <input type="text" id="textBox11" placeholder='Enter Email Id'/>
-        <input type="password" id="textBox22" placeholder='Enter Password'/>
+        <form onSubmit={handleSubmit}>
+        <input type="text" id="textBox11" value={email} onChange={(e)=>handleFun(e)} placeholder='Enter Email Id'/>
+        <input type="password" id="textBox22"  value={password} onChange={(e)=>handleFun(e)} placeholder='Enter Password'/>
         <input type="submit" id="btn11" value="Login"></input>
         <input type="reset" id="btn22" value="clear"></input>
         <Link to ='/' id = "btn33">   Back   </Link>
@@ -23,6 +55,11 @@ const UserLogin = () => {
         {/* <input type = "register" id= "btn44" >Don't have an account?  </input> */}
            {/* Don't have an account? <font color='red'>Register</font> */}
         </form>
+        <div>
+         <h3> {list!==null && list.message==="Invalid credentials" && <font color='red'>{list.message}</font>}</h3>
+         {/* <h3> {list!==null && list.message==="Login successful" && <font color='green'>{list.message}</font>}</h3> */}
+         <h3> {list!==null && list.message==="Login successful" }</h3>
+        </div>
       </div>
     </div>
   )

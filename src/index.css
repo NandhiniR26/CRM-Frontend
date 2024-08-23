@@ -176,8 +176,10 @@ font-weight: bold;
 #registerMainDiv div
 {
     display: inline-block;
-    /* border: 5px solid green; */
-}
+     /* border: 5px solid rgb(24, 210, 154); */
+     
+     
+} 
 #registerForm #textBox111,#textBox222,#textBox333,#textBox444
 {
   width:90%;
@@ -192,7 +194,8 @@ font-weight: bold;
 }
 #registerMainDiv #registerImg
 {
-  width: 60%; 
+  width: 60%;
+  
 }
 #registerMainDiv #registerForm
 {
