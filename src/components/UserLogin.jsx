@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../index.css'
 import userLoginImage from '../images/userLoginImage.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Axios  from 'axios'
-
+import { useNavigate } from 'react-router-dom'
 const UserLogin = () => {
 
   const[email,setEmail]=useState("")
   const[password,setPassword]=useState("")
   const [list,setList]=useState(null)
+  const [loggedIn,setLoggedIn]=useState(false) // true: login success otherwise failure
+  const navigate=useNavigate()
+
   const handleFun=(event)=>{
     if(event.target.id==="textBox11")
       setEmail(event.target.value)
@@ -35,7 +38,18 @@ const UserLogin = () => {
     // }).catch((err)=>{
     //   console.log("login failed:",err.data)
     // })
-  } 
+  }
+  useEffect(()=>{
+    if(loggedIn===true)
+    {      
+      navigate("/SideBar")
+      return
+    }
+  }) 
+  if(loggedIn===true)
+  {
+    return
+  }
   return (
     <div id="userMainDiv">
       <div id="userImg"> 
@@ -58,7 +72,7 @@ const UserLogin = () => {
         <div>
          <h3> {list!==null && list.message==="Invalid credentials" && <font color='red'>{list.message}</font>}</h3>
          {/* <h3> {list!==null && list.message==="Login successful" && <font color='green'>{list.message}</font>}</h3> */}
-         <h3> {list!==null && list.message==="Login successful" }</h3>
+         <h3> {list!==null && list.message==="Login successful" && setLoggedIn(true) }</h3>
         </div>
       </div>
     </div>

@@ -8,7 +8,8 @@ import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
 import './index.css'
 import './App.css'
 import Dashboard from './components/Dashboard';
-
+import Customer from './components/Customer';
+import SideBar from './components/SideBar';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <li><Link to = '/userLogin'></Link></li>
         <li><Link to = '/register'></Link></li>
         <li><Link to = '/dashboard'></Link></li>
+        <li><Link to = '/customer'></Link></li>
 
       </ul>
       <Routes>
@@ -28,9 +30,20 @@ const App = () => {
         <Route path = '/adminLogin' element =  {<AdminLogin/>} />
         <Route path = '/userLogin' element =  {<UserLogin/>} />
         <Route path = '/register' element = {<Register/>}/>
-        <Route path = '/dashboard' element = {<Dashboard/>}/>
+        
+        <Route path = '/sidebar' element = {<SideBar/>}/>
+        
+        
 
+       </Routes>
+       <SideBar>
+        <Routes>
+          <Route path="/customer" element={<Customer />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          
         </Routes>
+      </SideBar>
+      
     </BrowserRouter>
         
     </div>
