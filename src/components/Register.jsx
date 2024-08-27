@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import { Link} from 'react-router-dom'
 import '../index.css'
 import registerImage from '../images/registerImage.png'
@@ -14,6 +14,8 @@ const Register = () => {
   const [confirmPassword,setConfirmPassword] = useState("")
   const [list,setList]=useState(null)
   // const [inputs,setInputs] = useState({})
+  const [loggedIn,setLoggedIn]=useState(false) // true: login success otherwise failure
+  const navigate=useNavigate()
 
   const setUserNameFun=(event)=>{
     setUserName(event.target.value)
@@ -56,6 +58,17 @@ const handleSubmit=(event)=>{
    }
    
    //  console.log("test",userObj)
+   useEffect(()=>{
+    if(loggedIn===true)
+    {      
+      navigate("/userLogin")
+      return
+    }
+  }) 
+  if(loggedIn===true)
+  {
+    return
+  }
 return (
     <div id="registerMainDiv">
       <div id="registerImg"> 
@@ -78,7 +91,7 @@ return (
         </form>
         <div>
     <h4><font color="green">{list!==null && list.message}</font></h4>
-       
+    <h3> {list!==null && list.message==="User created successfully" && setLoggedIn(true) }</h3> 
         </div>
       </div>
     </div>

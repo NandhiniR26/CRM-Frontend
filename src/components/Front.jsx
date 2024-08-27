@@ -19,7 +19,7 @@ const Front = () => {
   <img id="userImage" src={userImage} style={{width:"200px",height:"200px"}}></img>
   </Link>
    </div>
-   
+  
     </>
   )
 }

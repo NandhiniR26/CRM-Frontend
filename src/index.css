@@ -273,7 +273,7 @@ main{
   background: #000;
   color: #fff;
   height: 100vh;
-  width: 200px;
+  width: 250px;
   transition: all 0.5s;
 }
 .top_section{
@@ -308,3 +308,12 @@ main{
 .icon, .link_text{
   font-size: 20px;
 }
+/*==========================dashboard============================*/
+#dashboard #barChart
+{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(236, 236, 231);
+
+}
+

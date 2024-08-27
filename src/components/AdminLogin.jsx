@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import adminLoginImage from '../images/adminLoginImage.png'
 import '../index.css'
 import { Link } from 'react-router-dom'
 import Axios from "axios"
+import { useNavigate } from 'react-router-dom'
+
 
 const AdminLogin = () => {
   
   const [email,setEmail]=useState("")
   const [password,setPassword] = useState("")
   const [list,setList]=useState(null)
+  const [loggedIn,setLoggedIn]=useState(false) // true: login success otherwise failure
+  const navigate=useNavigate()
 
   const setEmailFun = (event)=> {
     setEmail(event.target.value)
@@ -27,17 +31,32 @@ const AdminLogin = () => {
     email: email,
     password: password
   }
-  Axios.get("http://localhost:3001/api/v1/users/admin/users/",{id:"66acfbd95a7074081fd2c22a"}) 
+  
+  var path=`http://localhost:3001/api/v1/users/login`
+  //console.log(path)
+  Axios.post(path,adminLogin) 
    .then((res)=>{
 
-    console.log("Login successful",res.data)                                
+    console.log(" success response :",res.data)                                
      setList(res.data)
     }).catch((err)=>{
      console.log("Failed to login",err.data)
       setList(err.data)
     })
-  console.log("test")
   }
+    // console.log("test")
+  useEffect(()=>{
+    if(loggedIn===true)
+    {      
+      navigate("/sidebar")
+      return
+    }
+  }) 
+  if(loggedIn===true)
+  {
+    return
+  }
+  
   return (
     <div id="adminMainDiv">
       <div id="adminImg"> 
@@ -57,7 +76,7 @@ const AdminLogin = () => {
       </div>
       <div>
     <h4><font color="green">{list!==null && list.message}</font></h4>
-       
+    <h3> {list!==null && list.message==="Login successful" && setLoggedIn(true) }</h3>
         </div>
     
     </div>
@@ -65,3 +84,4 @@ const AdminLogin = () => {
 }
 
 export default AdminLogin
+

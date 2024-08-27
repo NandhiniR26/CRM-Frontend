@@ -24,33 +24,39 @@ const Sidebar = ({children}) => {
         },
         {
             path:"/customer",
-            name:"Customer",
+            name:"Customers",
             icon:<FaUserAlt/>
         },
         {
-            path:"/analytics",
-            name:"Analytics",
+            path:"/communication",
+            name:"Communications",
             icon:<FaRegChartBar/>
         },
         {
-            path:"/comment",
-            name:"Comment",
+            path:"/offers",
+            name:"Offers&Coupons",
             icon:<FaCommentAlt/>
         },
         {
-            path:"/product",
-            name:"Product",
+            path:"/mail",
+            name:"Email",
             icon:<FaShoppingBag/>
         },
         {
-            path:"/productList",
-            name:"Product List",
+            path:"/feedback",
+            name:"Feedback",
+            icon:<FaThList/>
+        },
+        {
+            path:"/",
+            name:"Logout",
             icon:<FaThList/>
         }
+
     ]
     return (
         <div className="container" style={{marginLeft:"0px"}}>
-           <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+           <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar">
                <div className="top_section">
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">CRM</h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">

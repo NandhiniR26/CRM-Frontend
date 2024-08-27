@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Axios  from 'axios'
 import { useNavigate } from 'react-router-dom'
+
 const UserLogin = () => {
 
   const[email,setEmail]=useState("")
@@ -32,17 +33,11 @@ const UserLogin = () => {
       console.log("Failed to login",err.data)
       setList(err.data)
      })
-     
-    // Axios.post("http://localhost:3001/api/v1/users/login",userObj).then((res)=>{
-    //   console.log("login successful:",res.data)
-    // }).catch((err)=>{
-    //   console.log("login failed:",err.data)
-    // })
-  }
+   }
   useEffect(()=>{
     if(loggedIn===true)
     {      
-      navigate("/SideBar")
+      navigate("/sidebar")
       return
     }
   }) 
