@@ -311,9 +311,12 @@ main{
 /*==========================dashboard============================*/
 #dashboard #barChart
 {
-  width: 100%;
-  height: 600px;
-  background-color: rgb(236, 236, 231);
-
+  position: absolute;
+  width: 83%;
+  height: 400px;
+  background-color: rgb(236, 236, 231); 
+     
 }
+
+
 

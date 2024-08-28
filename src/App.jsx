@@ -7,13 +7,13 @@ import Register from './components/Register';
 import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
 import './index.css'
 import './App.css'
-import Dashboard from './components/Dashboard';
-import Customer from './components/Customer';
-import SideBar from './components/SideBar';
-import Communication from './components/Communication';
-import Offers from './components/Offers';
-import Mail from './components/Mail';
-import Feedback from './components/Feedback';
+import Dashboard from './components/sidebar/Dashboard';
+import Customer from './components/sidebar/Customer';
+import SideBar from './components/sidebar/SideBar';
+import Communication from './components/sidebar/Communication';
+import Offers from './components/sidebar/Offers';
+import Mail from './components/sidebar/Mail';
+import Feedback from './components/sidebar/Feedback';
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
         <li><Link  to = '/adminLogin'></Link></li>
         <li><Link to = '/userLogin'></Link></li>
         <li><Link to = '/register'></Link></li>
-        <li><Link to = '/dashboard'></Link></li>
+        <li><Link to = '/sidebar/dashboard'></Link></li>
         <li><Link to = '/customer'></Link></li>
 
       </ul> */}
@@ -34,13 +34,16 @@ const App = () => {
         <Route path = '/adminLogin' element =  {<AdminLogin />} />
         <Route path = '/userLogin' element =  {<UserLogin />} />
         <Route path = '/register' element = {<Register />}/>
-        <Route path = '/sidebar' element = {<SideBar />}/>
-          <Route path="/customer" element={<Customer />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path = "/communication" element = {<Communication />} />
-          <Route path = "/offers" element = {<Offers />}/>
-          <Route path = "/mail" element = {<Mail />} />
-          <Route path = "/feedback" element = {<Feedback />}/>
+        <Route path = 'sidebar' element = {<SideBar />}>
+          <Route index element={<Dashboard></Dashboard>}/> 
+          {/* this is default page */}
+          <Route path="customer" element={<Customer />} />
+          <Route path="dashboard" element={<Dashboard />} />
+                  <Route path = "communication" element = {<Communication />} />
+          <Route path = "offers" element = {<Offers />}/>
+          <Route path = "mail" element = {<Mail />} />
+          <Route path = "feedback" element = {<Feedback />}/>
+          </Route>
          
         </Routes>
     </BrowserRouter>
