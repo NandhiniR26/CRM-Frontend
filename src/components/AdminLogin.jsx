@@ -58,7 +58,7 @@ const AdminLogin = () => {
   }
   
   return (
-    <div id="adminMainDiv">
+    <div id="adminMainDiv">    
       <div id="adminImg"> 
     <img src={adminLoginImage} alt=""></img>
       </div>
@@ -75,7 +75,7 @@ const AdminLogin = () => {
         </form>
       </div>
       <div>
-    <h4><font color="green">{list!==null && list.message}</font></h4>
+    <h4><font color="green">{list!==null && list.message}</font></h4>   
     <h3> {list!==null && list.message==="Login successful" && setLoggedIn(true) }</h3>
         </div>
     

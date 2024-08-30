@@ -25,9 +25,10 @@ const UserLogin = () => {
     var userObj={
       email:email,
       password:password
-    }
+}
+
     Axios.post("http://localhost:3001/api/v1/users/login",userObj) .then((res)=>{
-      console.log("login success",res.data)                                      
+      console.log("login success",res.data)                                          
        setList(res.data)
      }).catch((err)=>{
       console.log("Failed to login",err.data)
