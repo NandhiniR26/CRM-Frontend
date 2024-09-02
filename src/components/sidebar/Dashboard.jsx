@@ -125,37 +125,38 @@ function Home() {
 
             <h3>DASHBOARD</h3>
             
-            
+            {/* BsFillGrid3X3GapFill  */}
+            {/* BsFillBellFill */}
         </div>
         <br></br>
         <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>PRODUCTS</h3>
+                    <h4>BUDGET</h4>
                     <BsFillArchiveFill className='card_icon'/>
                 </div>
-                <h1>300</h1>
+                <h1>$24K</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>CATEGORIES</h3>
-                    <BsFillGrid3X3GapFill className='card_icon'/>
-                </div>
-                <h1>12</h1>
-            </div>
-            <div className='card'>
-                <div className='card-inner'>
-                    <h3>CUSTOMERS</h3>
+                    <h4>TOTAL CUSTOMERS</h4>
                     <BsPeopleFill className='card_icon'/>
                 </div>
-                <h1>33</h1>
+                <h1>15</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>ALERTS</h3>
+                    <h4>SALES PROGRESS</h4>
+                    <BsFillGrid3X3GapFill className='card_icon'/>
+                </div>
+                <h1>45%</h1>
+            </div>
+            <div className='card'>
+                <div className='card-inner'>
+                    <h4>TOTAL PROFIT</h4>
                     <BsFillBellFill className='card_icon'/>
                 </div>
-                <h1>42</h1>
+                <h1>55%</h1>
             </div>
         </div>
     <br></br>
@@ -182,6 +183,13 @@ function Home() {
                 <Bar dataKey="uv" fill="#82ca9d" />
                 </BarChart>
             </ResponsiveContainer>
+           
+     {/* <BarChart
+      xAxis={[{ scaleType: 'band', data: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] }]}
+      series={[{ data: [34,50,10,55,77,88,44,33,33,67,44,46],label:"sales performance" }]}
+      width={550}
+      height={300}
+    /> */}
 
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart

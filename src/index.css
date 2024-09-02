@@ -344,6 +344,7 @@ main{
 
 .card:first-child {
   background-color: #2962ff;
+  
 }
 
 .card:nth-child(2) {
@@ -420,7 +421,7 @@ main{
 /* Extra Small <= 576px */
 /*
 @media screen and (max-width: 576px) {
-  .hedaer-left {
+  .header-left {
     display: none;
   }
 }
