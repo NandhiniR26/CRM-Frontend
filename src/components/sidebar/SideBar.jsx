@@ -43,11 +43,6 @@ const Sidebar = ({children}) => {
             icon:<FaDollarSign/>
         },
         {
-            path:"/sidebar/mail",
-            name:"Email",
-            icon:<FaEnvelope/>
-        },
-        {
             path:"/sidebar/feedback",
             name:"Feedback",
             icon:<FaComment/>

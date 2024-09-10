@@ -1,16 +1,14 @@
-
 import axios from 'axios';
 import Axios from 'axios';
 import React,{useEffect,useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
-
 const Customer = () => {
    //const [columns,setColumns] = useState([])
    const [records,setRecords] = useState([])
+   //const [count,setCount]=useState(1)
    const navigate = useNavigate()
+   var count=0
 const url="http://localhost:3001/api/v1/customers"
 //var st=0
   useEffect(()=> {
@@ -32,11 +30,16 @@ const url="http://localhost:3001/api/v1/customers"
  },[]
   
 )
+const addCustomerStyle={
+  position:"absolute",
+  right:"40px",
+  top:'20px'
+}
   return (
     <>
     { <div className="container1 mt-5">
-    <div><font size="5" color="white">Customers</font></div>
-    <div className='text-end'><Link to = "/sidebar/add" className='btn btn-primary'>Add</Link></div>
+    <div align="center"><font size="6" color="white">Customers</font></div>
+    <div className='text-end' style={addCustomerStyle}><Link to = "/sidebar/add" className='btn btn-primary'>Add Customers</Link></div>
     
     <table className='table1'>
       
@@ -52,13 +55,14 @@ const url="http://localhost:3001/api/v1/customers"
       <tbody>
         {
           records.map ((d)=> (
-            <tr>
-              <td>{d._id}</td>
+          
+      <tr>
+              <td>{count+=1}</td>
               <td>{d.name}</td>
               <td>{d.email}</td>
               <td>{d.phone}</td>
               <td>{d.preferences}</td>
-              <td>
+              <td align='center'>
                 <Link to = {`/sidebar/edit/${d._id}`} className='btn btn-sm btn btn-success'>Edit</Link>
                 {/* <Link to = {`/sidebar/delete/${d._id}`} className='btn btn-sm ms-1 btn btn-danger'>Delete</Link> */}
                 <button onClick = {e=> handleSubmit (d._id)}className='btn btn-sm ms-1 btn btn-danger'>Delete</button>
@@ -77,11 +81,10 @@ const url="http://localhost:3001/api/v1/customers"
     axios.delete(`http://localhost:3001/api/v1/customers/${id}`)
     .then (res=> {
       alert ('customer deleted')
-      navigate(0)
+      navigate(0  )
       
     }).catch (err => console.log(err))
    }
   }
 }
-
 export default Customer;

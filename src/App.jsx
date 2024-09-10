@@ -12,7 +12,6 @@ import Customer from './components/sidebar/Customer';
 import SideBar from './components/sidebar/SideBar';
 import Communication from './components/sidebar/Communication';
 import Offers from './components/sidebar/Offers';
-import Mail from './components/sidebar/Mail';
 import Feedback from './components/sidebar/Feedback';
 import Add from './components/sidebar/Add';
 import Edit from './components/sidebar/Edit';
@@ -44,7 +43,7 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path = "communication" element = {<Communication />} />
           <Route path = "offers" element = {<Offers />}/>
-          <Route path = "mail" element = {<Mail />} />
+          {/* <Route path = "mail" element = {<Mail />} /> */}
           <Route path = "feedback" element = {<Feedback />}/>
           <Route path = "add" element = {<Add/>}/>
           <Route path = "edit/:id" element = {<Edit/>}/>
