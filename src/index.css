@@ -450,6 +450,7 @@ body {
 .table1{
   margin-left: 35px;
   width: 114%;
+  cursor:pointer;
 }
 .table1:hover
 {

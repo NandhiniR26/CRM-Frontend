@@ -12,10 +12,10 @@ const CardsList = () => {
     axios.get('http://localhost:3001/api/v1/communicationHistory')
       .then((response) => {
         console.log("s res :",response.data.communicationHistory)
-        setData(response.data.communicationHistory.slice(0, 20)); // Limit to 10 items for demo
+        setData(response.data.communicationHistory.slice(0, 20)); // Limiting to 20
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error); 
       });
   }, []);
 

@@ -1,5 +1,3 @@
-import axios from 'axios';
-import React,{useEffect,useState} from 'react';
 import CardsList from './CardsList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Communication = () => {
