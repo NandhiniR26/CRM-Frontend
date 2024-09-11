@@ -3,7 +3,7 @@ import '../index.css'
 
 import adminImage from '../images/admin.png'
 import userImage from '../images/user.png'
-import crmTitle from '../images/crmTitle.jpg'
+//import crmTitle from '../images/crmTitle.jpg'
 import { Link } from 'react-router-dom'
 const Front = () => {    
   return (

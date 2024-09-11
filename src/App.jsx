@@ -15,6 +15,8 @@ import Offers from './components/sidebar/Offers';
 import Feedback from './components/sidebar/Feedback';
 import Add from './components/sidebar/Add';
 import Edit from './components/sidebar/Edit';
+import AddFeedback from './components/sidebar/AddFeedback'
+
 
 
 const App = () => {
@@ -48,6 +50,7 @@ const App = () => {
           <Route path = "add" element = {<Add/>}/>
           <Route path = "edit/:id" element = {<Edit/>}/>
           {/* <Route path = "delete/:id" element = {<Delete/>}/> */}
+          <Route path = "addFeedback" element = {<AddFeedback/>}/>
           </Route>
          
         </Routes>

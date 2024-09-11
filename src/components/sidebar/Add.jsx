@@ -46,6 +46,7 @@ const Add = () => {
             onChange={e=>setInputData({...inputData,preferences: e.target.value})}/>
         </div><br />
         <button className='btn btn-info'>Submit</button>
+       
         </form>
      </div>
     </div> 
