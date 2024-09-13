@@ -1,30 +1,26 @@
-
 import React , { Component } from 'react';
-
 import { Card } from 'react-bootstrap';
-import  img1  from '../../images/Christmas.jpg'
-import  img2  from '../../images/CyberMonday.jpg'
-import  img3  from '../../images/Easter.jpeg'
-import  img4  from '../../images/Halloween.jpg'
-import  img5  from '../../images/Anniversary.jpg'
-import  img6  from '../../images/BackToSchool.jpg'
-import  img7  from '../../images/BlackFriday.webp'
-import  img8  from '../../images/Laborday.jpg'
-import  img9  from '../../images/NewYear.png'
-import  img10  from '../../images/Spring.webp'
+import  img1  from '../../images/Summer.webp'
+import  img2  from '../../images/Winter.jpeg'
+import  img3  from '../../images/NewYear.png'
+import  img4  from '../../images/Spring.webp'
+import  img5  from '../../images/BlackFriday.webp'
+import  img6  from '../../images/CyberMonday.jpg'
+import  img7  from '../../images/Valentine.jpg'
+import  img8  from '../../images/Easter.jpeg'
+import  img9  from '../../images/Laborday.jpg'
+import  img10  from '../../images/Halloween.jpg'
 import  img11 from '../../images/Thanksgiving.jpg'
-import  img12 from '../../images/Valentine.jpg'
-import  img13 from '../../images/Winter.jpeg'
-import  img14 from '../../images/Summer.webp'
-import  img15 from '../../images/Independence.jpg'
-
-
+import  img12 from '../../images/Independence.jpg'
+import  img13 from '../../images/BackToSchool.jpg'
+import  img14 from '../../images/Christmas.jpg'
+import  img15 from '../../images/Anniversary.jpg'
 
 //import Summer from '../sidebar/images/Winter.jpeg'
 //import { img1 } from './ImageModule';
 const OfferComponent = ({ data }) => {
 
-const arrImg=[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15]
+const objImg={"SUMMER2024":img1,"WINTER2024":img2,"NEWYEAR2025":img3,"SPRING2024":img4,"BLACKFRIDAY2024":img5,"CYBERMONDAY2024":img6,"VALENTINES2024":img7,"EASTER2024":img8,"LABORDAY2024":img9,"HALLOWEEN2024":img10,"THANKSGIVING2024":img11,"INDEPENDENCE2024":img12,"BACKTOSCHOOL2024":img13,"CHRISTMAS2024":img14,"ANNIVERSARY2024":img15}
 var s=-1
   const pStyle={
     fontSize:"14px"
@@ -34,9 +30,9 @@ var s=-1
     fontWeight:"bold"
   }
   const imgStyle={
-    border:"2px solid red",
-    backgroundColor:"gray",
-    borderRadius:"50%"
+   height:"6rem",
+    backgroundColor:"gray"
+   
   }
   const cardMain={
     width: '16rem', height:'35rem', margin: '2rem',backgroundColor:"white" 
@@ -48,8 +44,8 @@ var s=-1
         {/* <center style={cStyle}>
           customer id:<Card.Text>{data.customerId}</Card.Text>
         </center> */}
-        <h2>--{data.imgValue}</h2>
-         <center><img style={imgStyle} src={arrImg[parseInt(data.imgValue)]} width="100"></img></center>
+       
+         <center><img style={imgStyle} src={objImg[data.code]} width="100"></img></center>
         <hr size="5" color="black"></hr>
 
         
