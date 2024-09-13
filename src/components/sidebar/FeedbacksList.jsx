@@ -12,23 +12,23 @@ const FeedbacksList = () => {
     // Fetch data from an API
     axios.get('http://localhost:3001/api/v1/feedback')
       .then((response) => {
-        console.log("s res :",response.data.feedback)
-        setData(response.data.feedback.slice(0, 20)); // Limiting to 20
+        console.log("s res :",response.data.feedbacks)
+        setData(response.data.feedbacks.slice(0, 20)); // Limiting to 20
       })
       .catch((error) => {
         console.error('Error fetching data:', error); 
       });
   }, []);
-  const addCustomerStyle={
-    position:"absolute",
-    right:"40px",
-    top:'20px'
-  }
+  // const addCustomerStyle={
+  //   position:"absolute",
+  //   right:"40px",
+  //   top:'20px'
+  // }
 
   return (
     <>
-    <div align="center"><font size="6" color="white">Feedbacks</font></div>
-    <div className='text-end' style={addCustomerStyle}><Link to = "/sidebar/addFeedback" className='btn btn-primary'>Add Feedback</Link></div>
+    {/* <div align="center"><font size="6" color="white">Feedbacks</font></div> */}
+   
     <Container>
       <Row>
         {data.map((item) => (
@@ -41,9 +41,4 @@ const FeedbacksList = () => {
     </>
   );
 };
-
 export default FeedbacksList;
-
-
-
-

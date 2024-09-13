@@ -1,6 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+
+
+
 .route{
   font-size: x-large;
-  background-color: #212121 ;
+  /* background-color: #212121 ; */
+  background-color: rgb(201, 235, 249);
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -270,8 +277,11 @@ main{
   padding: 70px;
 }
 .sidebar{
-  background: #000;
-  color: #fff;
+/* background: #000; */
+  background: rgb(201, 235, 249);
+  
+  color: #000;
+  
   height: 100vh;
   width: 250px;
   transition: all 0.5s;
@@ -291,7 +301,7 @@ main{
 }
 .link{
   display: flex;
-  color: #fff;
+  color: #000;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
@@ -342,21 +352,37 @@ main{
   border-radius: 5px;
 }
 
-.card:first-child {
-  background-color: #2962ff;
+.card:first-child  {
+  /* background-color: #2962ff; */
+
+  background-color: rgb(248, 169, 169);
+  box-shadow: 3px 3px 3px 3px black;
+  
   
 }
 
+
+
 .card:nth-child(2) {
-  background-color: #ff6d00;
+  /* background-color: #ff6d00; */
+
+  background-color: rgb(185, 199, 255);
+  
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 .card:nth-child(3) {
-  background-color: #2e7d32;
+  /* background-color: #2e7d32; */
+
+  background-color: rgb(249, 186, 221);
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 .card:nth-child(4) {
-  background-color: #d50000;
+  /* background-color: #d50000; */
+
+  background-color: rgb(188, 250, 188);
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 .card-inner {
@@ -464,8 +490,10 @@ body {
 .table1,td,th
 {
   padding:10px;
-  background-color: white;
-  border:1px solid black;
+  background-color:rgb(149, 219, 240);
+   border:1px solid black; 
+  
+
 }
 
 
@@ -475,4 +503,11 @@ body {
   box-shadow: 0px 0px 3px 10px rgb(252, 252, 252);
   cursor: pointer;
   height: 26rem;
+}
+
+
+.cardStyle1:hover{
+  box-shadow: 0px 0px 3px 10px rgb(252, 252, 252);
+  cursor: pointer;
+  height: 20rem;
 }

@@ -184,13 +184,6 @@ function Home() {
                 </BarChart>
             </ResponsiveContainer>
            
-     {/* <BarChart
-      xAxis={[{ scaleType: 'band', data: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] }]}
-      series={[{ data: [34,50,10,55,77,88,44,33,33,67,44,46],label:"sales performance" }]}
-      width={550}
-      height={300}
-    /> */}
-
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                 width={500}

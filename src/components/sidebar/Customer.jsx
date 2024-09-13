@@ -38,7 +38,8 @@ const addCustomerStyle={
   return (
     <>
     { <div className="container1 mt-5">
-    <div align="center"><font size="6" color="white">Customers</font></div>
+    <div align="center"><font size="6" color="Black"><b>CUSTOMERS</b></font></div>
+    <br></br>
     <div className='text-end' style={addCustomerStyle}><Link to = "/sidebar/add" className='btn btn-primary'>Add Customers</Link></div>
     
     <table className='table1'>
