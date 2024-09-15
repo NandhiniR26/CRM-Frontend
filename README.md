@@ -1,5 +1,3 @@
-# CRM Application
-
 # CRM Application Frontend
 
 This is the CRM (Customer Relationship Management) application built using **React**, **Redux**, and **Bootstrap**. It is designed to provide a clean and user-friendly interface for managing customer data, communication history, and sales analytics.
@@ -34,7 +32,10 @@ This is the CRM (Customer Relationship Management) application built using **Rea
 2. **npm install**
 3. **npm run dev**
 
+## admin details
 
+- Email: crm@gmail.com
+- password: 12345
 
 
 
