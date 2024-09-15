@@ -24,7 +24,7 @@ const AdminLogin = () => {
     setEmail("")
     setPassword("")
   }
-  const handleSubmit = (e)=> {
+  const handleSubmit = async (e)=> {
   
   e.preventDefault()
   var adminLogin = {
@@ -34,7 +34,7 @@ const AdminLogin = () => {
   
   var path=`http://localhost:3001/api/v1/users/login`
   //console.log(path)
-  Axios.post(path,adminLogin) 
+  await Axios.post(path,{email,password},{withCredentials:true}) 
    .then((res)=>{
 
     console.log(" success response :",res.data)                                

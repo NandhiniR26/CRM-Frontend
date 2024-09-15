@@ -15,7 +15,7 @@
 /* =============================================== front page css =========================================== */
 .imageDisplay
 {
-  margin-top: 100px;
+  margin-top: 70px;
   
   
 }
@@ -38,12 +38,11 @@
   box-shadow: 3px 5px 10px 0px #ffdf34;
 }
 
-
-#frontPageTitle
+ #frontPageTitle
 {
-  background-color: #ffdf34;
+  background-color: rgb(201, 235, 249);
   text-align: center;
-}
+} 
 /*====================================================== admin login css======================================== */
 #adminMainDiv div
 {
@@ -491,7 +490,8 @@ body {
 {
   padding:10px;
   background-color:rgb(149, 219, 240);
-   border:1px solid black; 
+   border:1px solid rgb(28, 27, 27); 
+   color:#000
   
 
 }

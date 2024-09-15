@@ -67,50 +67,180 @@ import
  from 'recharts';
 import Header from './Header';
 
+
+
 function Home() {
 
-    const data = [
+  const data = [
+    {
+      name: 'J',
+      Sales:  3200,
+      Stock: 4000,
+      // amt: 2400,
+    },
+    {
+      name: 'F',
+      Sales: 1500,
+      Stock: 3000,
+      // amt: 2210,
+    },
+    {
+      name: 'M',
+      Sales: 4800,
+      Stock: 5000,
+      // amt: 2290,
+    },
+    {
+      name: 'A',
+      Sales: 4000,
+      Stock: 3908,
+      // amt: 2000,
+    },
+    {
+      name: 'M',
+      Sales: 6000,
+      Stock: 4800,
+      // amt: 2181,
+    },
+    {
+      name: 'J',
+      Sales: 7500,
+      Stock: 3800,
+      // amt: 2500,
+    },
+    {
+      name: 'J',
+      Sales: 5000,
+      Stock: 4300,
+      // amt: 2100,
+    },
+    {
+      name: 'A',
+      Sales: 5500,
+      Stock: 4300,
+      // amt: 2100,
+    },
+    {
+      name: 'S',
+      Sales: 6700,
+      Stock: 4300,
+      // amt: 2100,
+    },
+    {
+      name: 'O',
+      Sales: 6900,
+      Stock: 4300,
+      // amt: 2100,
+    },
+    {
+      name: 'N',
+      Sales: 8200,
+      Stock: 4300,
+      // amt: 2100,
+    },
+    {
+      name: 'D',
+      Sales: 9410,
+       Stock: 4300,
+      // amt: 2100,
+    },
+  ];
+      const data1 = [
         {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
+          name: 'J',
+          Revenue: 3000,
+          Productivity:4000,
+          // Sales:  3200,
+          // Stock: 4000,
+          // amt: 2400,
         },
         {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
+          name: 'F',
+          Revenue: 2500,
+          Productivity:7000,
+          // Sales: 1500,
+          // Stock: 3000,
+          // amt: 2210,
         },
         {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
+          name: 'M',
+          Revenue: 4500,
+          Productivity:6500,
+          // Sales: 9800,
+          // Stock: 5000,
+          // amt: 2290,
         },
         {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
+          name: 'A',
+          Revenue: 3800,
+          Productivity:5000,
+          // Sales: 4000,
+          // Stock: 3908,
+          // amt: 2000,
         },
         {
-          name: 'Page E',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
+          name: 'M',
+          Revenue: 5500,
+          Productivity:9000,
+          // Sales: 6000,
+          // Stock: 4800,
+          // amt: 2181,
         },
         {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
+          name: 'J',
+          Revenue: 4900,
+          Productivity:6900,
+          // Sales: 7500,
+          // Stock: 3800,
+          // amt: 2500,
         },
         {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
+          name: 'J',
+          Revenue: 6900,
+          Productivity:7700,
+          // Sales: 5000,
+          // Stock: 4300,
+          // amt: 2100,
+        },
+        {
+          name: 'A',
+          Revenue: 9800,
+          Productivity:5900,
+          // Sales: 5500,
+          // Stock: 4300,
+          // amt: 2100,
+        },
+        {
+          name: 'S',
+          Revenue: 5800,
+          Productivity:7900,
+          // Sales: 6700,
+          // Stock: 4300,
+          // amt: 2100,
+        },
+        {
+          name: 'O',
+          Revenue: 7800,
+          Productivity:8000,
+          // Sales: 6900,
+          // Stock: 4300,
+          // amt: 2100,
+        },
+        {
+          name: 'N',
+          Revenue: 5600,
+          Productivity:9000,
+          // Sales: 8200,
+          // Stock: 4300,
+          // amt: 2100,
+        },
+        {
+          name: 'D',
+          Revenue: 9900,
+          Productivity:10000,
+          // Sales: 9410,
+          //  Stock: 4300,
+          // amt: 2100,
         },
       ];
      
@@ -179,8 +309,8 @@ function Home() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <Bar dataKey="Sales" fill="#8884d8" />
+                 <Bar dataKey="Stock" fill="#82ca9d" /> 
                 </BarChart>
             </ResponsiveContainer>
            
@@ -188,7 +318,7 @@ function Home() {
                 <LineChart
                 width={500}
                 height={300}
-                data={data}
+                data={data1}
                 margin={{
                     top: 5,
                     right: 30,
@@ -201,9 +331,10 @@ function Home() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="Revenue" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Productivity" stroke="#82ca9d" />
                 </LineChart>
+              
             </ResponsiveContainer>
 
         </div>
