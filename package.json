@@ -7,7 +7,7 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-   "build": "npm install -D webpack-cli && webpack --mode production",
+    "build" : "npm install && npm run build",
     "start": "webpack serve --mode development"
   },
   "dependencies": {
