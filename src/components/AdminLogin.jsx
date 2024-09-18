@@ -32,7 +32,7 @@ const AdminLogin = () => {
     password: password
   }
   
-  var path=`http://localhost:3001/api/v1/users/login`
+  var path=`https://crm-backend-d23x.onrender.com/api/v1/users/login`
   //console.log(path)
   await Axios.post(path,{email,password},{withCredentials:true}) 
    .then((res)=>{

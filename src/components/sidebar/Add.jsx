@@ -9,7 +9,7 @@ const Add = () => {
   function handleSubmit (event) {
     event.preventDefault()
 
-    axios.post('http://localhost:3001/api/v1/customers',inputData)
+    axios.post('https://crm-backend-d23x.onrender.com/api/v1/customers',inputData)
     .then(res=> {
         alert("Customer Added successfully")
         navigate('/sidebar/customer')

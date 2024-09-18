@@ -48,7 +48,7 @@ const handleSubmit=(event)=>{
     password: password
   }
 
-   Axios.post("http://localhost:3001/api/v1/users/register",userObj) .then((res)=>{
+   Axios.post("https://crm-backend-d23x.onrender.com/api/v1/users/register",userObj) .then((res)=>{
     console.log("Registered successfully",res.data)                                      
      setList(res.data)
    }).catch((err)=>{

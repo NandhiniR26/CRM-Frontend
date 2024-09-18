@@ -9,7 +9,7 @@ const CardsList = () => {
 
   useEffect(() => {
     // Fetch data from an API
-    axios.get('http://localhost:3001/api/v1/communicationHistory')
+    axios.get('https://crm-backend-d23x.onrender.com/api/v1/communicationHistory')
       .then((response) => {
         console.log("s res :",response.data.communicationHistory)
         setData(response.data.communicationHistory.slice(0, 20)); // Limiting to 20

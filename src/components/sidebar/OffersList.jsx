@@ -9,7 +9,7 @@ const OffersList = () => {
 
   useEffect(() => {
     // Fetch data from an API
-    axios.get('http://localhost:3001/api/v1/offersAndCoupons')
+    axios.get('https://crm-backend-d23x.onrender.com/api/v1/offersAndCoupons')
       .then((response) => {
         console.log("s res :",response.data.offersAndCoupons)
         setData(response.data.offersAndCoupons.slice(0, 20)); // Limiting to 20

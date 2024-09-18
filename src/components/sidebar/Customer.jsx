@@ -9,7 +9,7 @@ const Customer = () => {
    //const [count,setCount]=useState(1)
    const navigate = useNavigate()
    var count=0
-const url="http://localhost:3001/api/v1/customers"
+const url="https://crm-backend-d23x.onrender.com/api/v1/customers"
 //var st=0
   useEffect(()=> {
 
@@ -79,7 +79,7 @@ const addCustomerStyle={
   function handleSubmit (id) {
    const confirm =  window.confirm('Do you want to delete')
    if (confirm) {
-    axios.delete(`http://localhost:3001/api/v1/customers/${id}`)
+    axios.delete(`https://crm-backend-d23x.onrender.com/api/v1/customers/${id}`)
     .then (res=> {
       alert ('customer deleted')
       navigate(0  )

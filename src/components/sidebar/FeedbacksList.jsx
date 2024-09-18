@@ -10,7 +10,7 @@ const FeedbacksList = () => {
 
   useEffect(() => {
     // Fetch data from an API
-    axios.get('http://localhost:3001/api/v1/feedback')
+    axios.get('https://crm-backend-d23x.onrender.com/api/v1/feedback')
       .then((response) => {
         console.log("s res :",response.data.feedbacks)
         setData(response.data.feedbacks.slice(0, 20)); // Limiting to 20

@@ -10,7 +10,7 @@ const Edit = () => {
     useEffect(()=> {
         if(data.length===0)
             {
-       axios.get(`http://localhost:3001/api/v1/customers/${id}`)
+       axios.get(`https://crm-backend-d23x.onrender.com/api/v1/customers/${id}`)
        .then((res)=> {setData(res.data.customer)
                 console.log("success response:",res.data.customer)
                 console.log("message:",res.data.message)
@@ -20,7 +20,7 @@ const Edit = () => {
       function handleSubmit (event) {
         event.preventDefault()
         console.log("update data:",data)
-        axios.put(`http://localhost:3001/api/v1/customers/${id}`,data)
+        axios.put(`https://crm-backend-d23x.onrender.com/api/v1/customers/${id}`,data)
         .then(res=> {
             alert ("Updated Successfully")
             navigate('/sidebar/customer')
